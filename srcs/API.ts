@@ -22,8 +22,8 @@ export class API implements IAPI {
 	client_id!		: string;
 	client_secret!	: string;
 	access_token!	: string;
-	grant_type		: string = "client_credentials";
-	url				: string = "https://api.intra.42.fr/v2";
+	grant_type		: string	= "client_credentials";
+	url				: string	= "https://api.intra.42.fr/v2";
 
 	public async start(client_id:string, client_secret:string): Promise<void> {
 		this.client_id		= client_id;
@@ -53,7 +53,7 @@ export class API implements IAPI {
 	}
 
 	async request(route:string): Promise<any> {
-		const config = {
+		const	config	= {
 			headers: { Authorization: `Bearer ${this.access_token}` }
 		};
 

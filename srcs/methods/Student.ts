@@ -2,20 +2,20 @@ import consola, { Consola } from 'consola';
 import date, { Date } from 'date.js';
 
 interface ILogtime {
-	days: number;
-	hours: number;
-	minutes: number;
-	secondes: number;
+	days		: number;
+	hours		: number;
+	minutes		: number;
+	secondes	: number;
 }
 
 export class Student {
 
-	public logger: Consola = consola;
+	public	logger: Consola	= consola;
 
 	private	login:string;
-	private	projects_user:Array<any> = [];
-	private	valided_project = 0;
-	private	valided_exam = 0;
+	private	projects_user:Array<any>	= [];
+	private	valided_project				= 0;
+	private	valided_exam				= 0;
 
 	constructor(login:string) {
 		this.login = login;
@@ -48,8 +48,8 @@ export class Student {
 
 	// Method for '/users/xlogin/locations' routes
 	public async getLogTime(response:any, startTime:Date, endTime:Date) {
-		let	logtime:ILogtime = {days:0,hours:0,minutes:0,secondes:0};
-		let tmp:any = 0;
+		let	logtime:ILogtime	= {days:0,hours:0,minutes:0,secondes:0};
+		let	tmp:any				= 0;
 
 		await response.forEach((locations:any) => {
 			let	begin_at = date(locations.begin_at);
@@ -79,7 +79,7 @@ export class Student {
 	// Method for '/users/xlogin/locations_stats' routes
 	// This routes doesn't return the current days
 	public async getLogTimeNew(response:any, startTime:Date, endTime:Date) {
-		let	logtime:ILogtime = {days:0,hours:0,minutes:0,secondes:0};
+		let	logtime:ILogtime	= {days:0,hours:0,minutes:0,secondes:0};
 
 		for (const time in response)
 		{
