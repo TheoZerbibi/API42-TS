@@ -28,7 +28,6 @@ export class API implements IAPI {
 	public async start(client_id:string, client_secret:string): Promise<void> {
 		this.client_id		= client_id;
 		this.client_secret	= client_secret;
-		// this.access_token = "dd4e9ae49ea98613fc0052a930ddc61a955516a98a7b89113289875a10bfec7e";
 		await this.getAccesToken();
 
 		this.logger.success('API is ready!');
@@ -48,7 +47,6 @@ export class API implements IAPI {
 			console.log(error.response.data);
 			process.exit(1);
 		}).then((response: any) => {
-			// console.log(response);
 			this.access_token = response.access_token;
 			return(response)
 		});
