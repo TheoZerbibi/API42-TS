@@ -1,0 +1,10 @@
+{
+	"API" : {
+		"client_id":"",
+		"client_secret":""
+	},
+	"SQL" : {
+		"user": "",
+		"password": ""
+	}
+}

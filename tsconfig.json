@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"target": "es6",
+		"module": "commonjs",
+		"strict": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"outDir": "dist",
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"paths": {
+			"*":
+			[
+				"node_modules/*"
+			]
+		}
+	},
+	"lib": ["es2015"],
+	"include": [ "srcs/**/*", "tools"  ],
+	}
